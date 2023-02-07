@@ -1,0 +1,10 @@
+POST http://127.0.0.1:생성된포트번호/users
+Content-Type: application/json
+
+{
+  "email": "hok0173@naver.com",
+  "name": "Wonuk Hwang",
+  "pwd": "password"
+}
+
+###
