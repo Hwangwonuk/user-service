@@ -4,6 +4,16 @@ server:
 spring:
   application:
     name: user-service
+  h2:
+    console:
+      enabled: true
+      settings:
+        # 외부접속 허용
+        web-allow-others: true
+        # 주소값
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:~/testdb
 
 eureka:
   instance:
