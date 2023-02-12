@@ -9,7 +9,9 @@
  */
 package com.example.userservice.dto;
 
+import com.example.userservice.vo.ResponseOrder;
 import java.util.Date;
+import java.util.List;
 import lombok.Data;
 
 /**
@@ -33,4 +35,6 @@ public class UserDto {
   private Date createdAt;
 
   private String encryptedPwd;
+
+  private List<ResponseOrder> orders;
 }

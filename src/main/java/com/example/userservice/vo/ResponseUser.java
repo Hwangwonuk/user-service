@@ -9,6 +9,9 @@
  */
 package com.example.userservice.vo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import java.util.List;
 import lombok.Data;
 
 /**
@@ -24,8 +27,12 @@ import lombok.Data;
  */
 
 @Data
+// Null이 아닌것만 Json 형태로 Response 하게 만들어주는 어노테이션
+@JsonInclude(Include.NON_NULL)
 public class ResponseUser {
   private String email;
   private String name;
   private String userId;
+
+  private List<ResponseOrder> orders;
 }
