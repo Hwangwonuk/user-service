@@ -11,6 +11,7 @@ package com.example.userservice.service;
 
 import com.example.userservice.dto.UserDto;
 import com.example.userservice.jpa.UserEntity;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
  * create on 2023/02/07. create by IntelliJ IDEA.
@@ -23,7 +24,7 @@ import com.example.userservice.jpa.UserEntity;
  * @see
  * @since (ex : 5 + 5)
  */
-public interface UserService {
+public interface UserService extends UserDetailsService {
   UserDto createUser(UserDto userDto);
 
   UserDto getUserByUserId(String userId);
