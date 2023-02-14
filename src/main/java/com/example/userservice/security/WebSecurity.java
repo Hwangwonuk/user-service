@@ -84,10 +84,11 @@ public class WebSecurity {
   }
 
   private AuthenticationFilter getAuthenticationFilter() throws Exception {
-    AuthenticationFilter authenticationFilter = new AuthenticationFilter();
-    authenticationFilter.setAuthenticationManager(
-        authenticationConfiguration.getAuthenticationManager()
-    );
+    AuthenticationFilter authenticationFilter = new AuthenticationFilter(
+        authenticationConfiguration.getAuthenticationManager(), userService, env);
+//    authenticationFilter.setAuthenticationManager(
+//        authenticationConfiguration.getAuthenticationManager()
+//    );
 
     return authenticationFilter;
   }
