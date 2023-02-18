@@ -69,6 +69,8 @@ public class WebSecurity {
         .authorizeHttpRequests((authorizeRequests) -> {
               try {
                 authorizeRequests
+                    .requestMatchers("/actuator/**")
+                    .permitAll()
                     .requestMatchers("/**").access(hasIpAddress("192.168.219.100"))
                     .anyRequest().authenticated()
                     .and()
