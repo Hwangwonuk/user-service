@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: user-service
+  profiles:
+    active: native
 
   h2:
     console:
