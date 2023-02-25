@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
     this.env = env;
     this.restTemplate = restTemplate;
     this.orderServiceClient = orderServiceClient;
-    this.circuitBreakerFactory = circuitBreakerFactory
+    this.circuitBreakerFactory = circuitBreakerFactory;
   }
 
   @Override
