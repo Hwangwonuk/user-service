@@ -22,8 +22,11 @@ ENTRYPOINT ["java","-jar","UserService.jar"]
 # EXPOSE 3306
 # ENTRYPOINT ["mysqld", "--user=root"]
 
+# 이미지 생성하기
+# docker build -t hwk0173/my_mariadb:1.0 .
+
 # Mariadb 컨테이너 실행하기
-# docker run -d -p 3306:3306  --network ecommerce-network --name mariadb edowon0623/my-mariadb:1.0
+# docker run -d -p 3306:3306 --network ecommerce-network --name mariadb hwk0173/my_mariadb:1.0
 
 # docker 내부의 DB권한 변경
 # docker exec -it mariadb /bin/bash
