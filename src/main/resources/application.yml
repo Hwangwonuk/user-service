@@ -15,6 +15,10 @@ spring:
     port: 5672
     username: guest
     password: guest
+  # TODO: check sleuth Error
+  cloud:
+    compatibility-verifier:
+      enabled: false
 
   h2:
     console:
@@ -61,3 +65,4 @@ management:
 #  # 60 * 60* 24 * 1000 ms
 #  expiration_time: 86400000
 #  secret: user_token
+

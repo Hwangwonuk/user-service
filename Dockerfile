@@ -14,6 +14,24 @@ ENTRYPOINT ["java","-jar","UserService.jar"]
 # -e RABBITMQ_DEFAULT_USER=guest -e  RABBITMQ_DEFAULT_PASS=guest
 # rabbitmq:management
 
+# ---------------------------------------
+# docker image 생성하기
+# docker build -t hwk0173/user-service:1.0 .
+
+# image push 하기
+# docker push hwk0173/user-service:1.0
+
+# docker container 생성 및 실행하기
+# docker run -d --network ecommerce-network --name user-service
+# -e "spring.cloud.config.uri=http://config-service:8888" -e "spring.rabbitmq.host=rabbitmq"
+# -e "spring.zipkin.base-url=http://zipkin:9411"
+# -e "eureka.client.serviceUrl.defaultZone=http://discovery-service:8761/eureka/"
+# -e "logging.file=/api-logs/users-ws.log" hwk0173/user-service:1.0
+
+
+
+# ---------------------------------------
+
 # Mariadb 컨테이너 생성하기
 # FROM mariadb
 # ENV MYSQL_ROOT_PASSWORD test1357
